@@ -65,9 +65,10 @@ console.log("start gRPC test")
   }))
 
   // Calculate and display gRPC statistics
-  console.log(`gRPC Mean Time: ${grpcTimings.amean().toFixed(2)} ms`);
-  console.log(`gRPC Average Time: ${grpcTimings.median().toFixed(2)} ms`);
+  console.log(`gRPC Average Time: ${grpcTimings.amean().toFixed(2)} ms`);
+  console.log(`gRPC Median Time: ${grpcTimings.median().toFixed(2)} ms`);
   console.log(`gRPC 50th Percentile: ${grpcTimings.percentile(50).toFixed(2)} ms`);
+  console.log(`gRPC 90th Percentile: ${grpcTimings.percentile(90).toFixed(2)} ms`);
   console.log(`gRPC 95th Percentile: ${grpcTimings.percentile(95).toFixed(2)} ms`);
   console.log(`gRPC 99th Percentile: ${grpcTimings.percentile(99).toFixed(2)} ms`);
 })();
@@ -92,9 +93,10 @@ await (async () => {
   }))
 
   // Calculate and display REST statistics
-  console.log(`REST Mean Time: ${restTimings.amean().toFixed(2)} ms`);
+  console.log(`REST Average Time: ${restTimings.amean().toFixed(2)} ms`);
   console.log(`REST Median Time: ${restTimings.median().toFixed(2)} ms`);
   console.log(`REST 50th Percentile: ${restTimings.percentile(50).toFixed(2)} ms`);
+  console.log(`REST 90th Percentile: ${restTimings.percentile(90).toFixed(2)} ms`);
   console.log(`REST 95th Percentile: ${restTimings.percentile(95).toFixed(2)} ms`);
   console.log(`REST 99th Percentile: ${restTimings.percentile(99).toFixed(2)} ms`);
 })();
